@@ -1,0 +1,13 @@
+<!-- 
+    <div className="titulo">
+
+      <h1>hello {name}</h1>
+
+      <img src="https://png.pngtree.com/png-vector/20250805/ourmid/pngtree-black-and-white-high-contrast-jason-voorhees-portrait-with-machete-png-image_17014524.webp" alt="" />
+
+      <CardPerfil nome="Sophia" profissao="porisifasi"/>
+      <CardPerfil nome="wawaGP" profissao="GP"/>
+      <CardPerfil nome="Kevin" profissao="recruta"/>
+
+      <CartaoHabilidade habilidade="SEMATAR" nivel="17"/>
+    </div> -->
