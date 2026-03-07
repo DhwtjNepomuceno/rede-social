@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+div {
+  width: 100%;
+  text-align: center;
+}
+
+.titulo {
+  margin: 0;
+  align-items: flex-start;
+}
