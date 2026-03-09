@@ -17,41 +17,13 @@ function HomePage() {
       </Box>
 
       <div className="Pefis">
-        <Box className="boxPerfis">
-          <Avatar className="avatarPerfil" sx={{ bgcolor: "main.white", color: "main.black" }}>J</Avatar>
-          <CardPerfil
-            nome="Jasmin"
-            profissao="Engenheira Civil"
-            cidade="Vitória"
-            uf="Sp"
-            email="Jass@email.com"
-          />
-          <CardHabilidade className="habilidade" habilidade="Liderança" nivel="2" />
-        </Box>
-
-        <Box className="boxPerfis">
-          <Avatar className="avatarPerfil" sx={{ bgcolor: "main.white", color: "main.black" }}>J</Avatar>
-          <CardPerfil
-            nome="Marina"
-            profissao="Pediatra"
-            cidade="Vila Velha"
-            uf="ES"
-            email="MariPediatria@email.com"
-          />
-          <CardHabilidade className="habilidade" habilidade="Autodidata" nivel="5" />
-        </Box>
-
-        <Box className="boxPerfis">
-          <Avatar className="avatarPerfil" sx={{ bgcolor: "main.white", color: "main.black" }}>J</Avatar>
-          <CardPerfil
-            nome="Marcos"
-            profissao="Gerente"
-            cidade="Cariacica"
-            uf="ES"
-            email="MarcoSiq@email.com"
-          />
-          <CardHabilidade className="habilidade" habilidade="Observação" nivel="27"/>
-        </Box>
+        <CardPerfil
+          nome="Jasmin"
+          profissao="Engenheira Civil"
+          cidade="Vitória"
+          uf="ES"
+          email="Jass@email.com"
+        />
       </div>
     </>
   );
