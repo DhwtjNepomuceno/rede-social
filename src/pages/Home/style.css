@@ -5,7 +5,7 @@
 }
 
 .Perfis {
-    display: flex;
+    display: grid;
     justify-content: center;
 }
 
@@ -17,7 +17,8 @@
 .boxPerfis {
     margin: 32px;
     border: 2px solid blueviolet;
-    width: 300px;
+    border-radius: 30px;
+    width: 250px;
     height: 250px;
     display: flex;
     flex-direction: column;
