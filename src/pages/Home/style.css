@@ -1,43 +1,13 @@
-* {
-    box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
-}
-
-.Perfis {
+main {
     display: grid;
     justify-content: center;
 }
 
-.boxPerfis .habilidade{
-    display: flex;
+.Perfis {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     justify-content: center;
-}
-
-.boxPerfis {
-    margin: 32px;
-    border: 2px solid blueviolet;
-    border-radius: 30px;
-    width: 250px;
-    height: 250px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.avatarPerfil {
-    justify-self: center;
-}
-
-h2 {
-    margin: 0px;
-}
-
-h3{
-    margin: 0px;
-}
-
-p {
-    margin: 0px;
+    gap: 32px;
+    padding: 32px;
+    width: fit-content;
 }
