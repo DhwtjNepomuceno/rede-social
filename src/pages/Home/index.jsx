@@ -1,6 +1,7 @@
 import "./style.css";
 
 import CardPerfil from "../../components/CardPerfil";
+import CardHabilidade from "../../components/CardHabilidade";
 
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
@@ -23,7 +24,7 @@ function HomePage() {
       profissao: "Engenheira Civil",
       cidade: "Vitória",
       uf: "ES",
-      email: "jasmin@email.com",
+      email: "jasmin@email.com"
     },
     {
       id: gerarID(),
@@ -31,7 +32,7 @@ function HomePage() {
       profissao: "Desenvolvedor de Software",
       cidade: "São Paulo",
       uf: "SP",
-      email: "carlos@email.com",
+      email: "carlos@email.com"
     },
     {
       id: gerarID(),
@@ -39,7 +40,15 @@ function HomePage() {
       profissao: "Designer Gráfico",
       cidade: "Rio de Janeiro",
       uf: "RJ",
-      email: "maria@email.com",
+      email: "maria@email.com"
+    }
+  ];
+
+  const listaCompetencias = [
+    {
+      id: gerarID(),
+      habilidade: "comunicação",
+      nivel: "2"
     }
   ];
 
@@ -64,8 +73,13 @@ function HomePage() {
           />
         )) }
       </div>
-
-      {/* Renderizar cards habilidade aqui */}
+      { listaCompetencias.map((competencia) => (
+          <CardHabilidade
+            key={competencia.id} 
+            habilidade={competencia.habilidade}
+            nivel={competencia.nivel}
+          />
+        )) }
       <div>
         
       </div>

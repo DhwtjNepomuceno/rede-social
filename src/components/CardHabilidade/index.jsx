@@ -20,11 +20,7 @@ function CardHabilidade(props) {
   const habilidade = props.habilidade.trim().length
     ? props.habilidade
     : "Habilidade desconhecida";
-  const nivel = isNaN(props.nivel)
-    ? "Erro. Insira apenas números"
-    : validarNivel(props.nivel.trim())
-      ? props.nivel
-      : "Nível inválido";
+  const nivel = validarNivel(props.nivel) ? Number(props.nivel) : 0;
   return (
     <Box component="div" sx={boxStyles}>
       <Typography component="h1" variant="h5">
@@ -35,7 +31,7 @@ function CardHabilidade(props) {
         valueLabelDisplay="auto"
         shiftStep={30}
         marks
-        min={1}
+        min={0}
         max={5}
         disabled
       />
