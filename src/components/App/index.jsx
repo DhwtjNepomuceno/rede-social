@@ -1,23 +1,13 @@
 import "./style.css";
-import HomePage from "../../pages/Home";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
-
-const theme = createTheme({
-  palette: {
-    main: {
-      primary: "#21BFAF",
-      secondary: "#B0D9D5",
-      tertiary: "#D96F66",
-      white: "#F2F0EB",
-      black: "#0D0D0D",
-    },
-  },
-});
+import { ThemeProvider } from "@mui/material/styles";
+import { RouterProvider } from "react-router";
+import routes from "../../routes";
+import theme from "../../styles/theme/dark";
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <HomePage />
+      <RouterProvider router={routes} />
     </ThemeProvider>
   );
 }
