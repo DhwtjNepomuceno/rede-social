@@ -11,3 +11,14 @@ main {
     padding: 32px;
     width: fit-content;
 }
+
+header {
+    display: flex;
+    position: relative;
+}
+
+h1 {
+    position: absolute;
+    left: 50vw;
+    transform: translateX(-50%);
+}

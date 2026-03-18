@@ -1,7 +1,9 @@
 import "./style.css";
 
 import CardPerfil from "../../components/CardPerfil";
-import CardHabilidade from "../../components/CardHabilidade";
+import CardHabilidade from "../../components/CardCompetencias";
+
+import VoltarPaginas from "../../components/voltarPagina";
 
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
@@ -24,7 +26,7 @@ function HomePage() {
       profissao: "Engenheira Civil",
       cidade: "Vitória",
       uf: "ES",
-      email: "jasmin@email.com"
+      email: "jasmin@email.com",
     },
     {
       id: gerarID(),
@@ -32,7 +34,7 @@ function HomePage() {
       profissao: "Desenvolvedor de Software",
       cidade: "São Paulo",
       uf: "SP",
-      email: "carlos@email.com"
+      email: "carlos@email.com",
     },
     {
       id: gerarID(),
@@ -40,50 +42,53 @@ function HomePage() {
       profissao: "Designer Gráfico",
       cidade: "Rio de Janeiro",
       uf: "RJ",
-      email: "maria@email.com"
-    }
+      email: "maria@email.com",
+    },
   ];
 
   const listaCompetencias = [
     {
       id: gerarID(),
       habilidade: "comunicação",
-      nivel: "2"
-    }
+      nivel: "2",
+    },
   ];
 
   return (
     <>
-      <Box component="header" sx={{ p: 4, bgcolor: "main.primary" }}>
-        <Typography component="h1" variant="h4" color="main.white">
+      <Box component="header" sx={{ p: 2.5, bgcolor: "main.primary" }}>
+        <VoltarPaginas />
+        <Typography component="h1" variant="h5" color="main.white">
           Boas-vindas à Devisal, {nome}
         </Typography>
       </Box>
 
-    <main>
-      <div className="Perfis">
-        { listaPerfis.map((perfil) => ( // Renderizando lista da tela (JS básico)
-          <CardPerfil
-            key={perfil.id} // Cada elemento JSX precisa ter um ID único
-            nome={perfil.nome}
-            profissao={perfil.profissao}
-            cidade={perfil.cidade}
-            uf={perfil.uf}
-            email={perfil.email}
-          />
-        )) }
-      </div>
-      { listaCompetencias.map((competencia) => (
+      <main>
+        <div className="Perfis">
+          {listaPerfis.map(
+            (
+              perfil, // Renderizando lista da tela (JS básico)
+            ) => (
+              <CardPerfil
+                key={perfil.id} // Cada elemento JSX precisa ter um ID único
+                nome={perfil.nome}
+                profissao={perfil.profissao}
+                cidade={perfil.cidade}
+                uf={perfil.uf}
+                email={perfil.email}
+              />
+            ),
+          )}
+        </div>
+        {listaCompetencias.map((competencia) => (
           <CardHabilidade
-            key={competencia.id} 
+            key={competencia.id}
             habilidade={competencia.habilidade}
             nivel={competencia.nivel}
           />
-        )) }
-      <div>
-        
-      </div>
-    </main>
+        ))}
+        <div></div>
+      </main>
     </>
   );
 }

@@ -23,7 +23,7 @@ function CardHabilidade(props) {
   const nivel = validarNivel(props.nivel) ? Number(props.nivel) : 0;
   return (
     <Box component="div" sx={boxStyles}>
-      <Typography component="h1" variant="h5">
+      <Typography component="h2" variant="h5">
         {habilidade}
       </Typography>
       <Slider
