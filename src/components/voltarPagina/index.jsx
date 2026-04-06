@@ -1,13 +1,14 @@
 import "./style.css";
 
-import { Link } from "react-router";
+import { useNavigate } from "react-router";
 
 function VoltarPaginas() {
+  const navigate = useNavigate();
 
   return (
-      <Link className="Voltar" to="">
+      <button className="Voltar" onClick={() => (navigate(-1))} >
         {"<"}
-      </Link>
+      </button>
   );
 }
 

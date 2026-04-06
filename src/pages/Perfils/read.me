@@ -1,0 +1,29 @@
+useEffect(() => {
+    async function listarUsuarios() {
+      try {
+        const res = await usuariosService.get();
+        console.log(res);
+
+        setListaPerfis(res.data); // ✅ aqui resolve tudo
+      } catch (error) {
+        console.error("Erro ao listar usuários: ", error);
+        alert("Erro ao listar usuários");
+        setListaPerfis([]);
+      }
+    }
+
+
+
+    async function listarUsuarios() {
+  return usuariosService
+    .get()
+    .then((res) => {
+  console.log(res);
+  return res.dado || [];
+})
+    .catch((error) => {
+      console.error("Erro ao listar usuários: ", error);
+      alert("Erro ao listar usuários");
+      return []
+    })
+}

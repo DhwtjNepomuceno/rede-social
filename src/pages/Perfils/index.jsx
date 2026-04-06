@@ -1,54 +1,46 @@
-import "./style.css"
-import { gerarID } from "../../utils/gerarID";
+import "./style.css";
 
 import CardPerfil from "../../components/CardPerfil";
+import { UsuariosService } from "../../services/usuariosService";
+
+const usuariosService = new UsuariosService();
+
+async function listarUsuarios() {
+  return usuariosService
+    .get()
+    .then((res) => {
+      return res.data;
+    })
+    .catch((error) => {
+      console.error("Erro ao listar usuários: ", error);
+      alert("Erro ao listar usuários");
+      return []
+    });
+}
+
+const listaPerfis = await listarUsuarios();
 
 function PerfisPage() {
-    // Mockando uma lista de perfis (isso estaria vindo da API)
-    const listaPerfis = [
-        {
-            id: gerarID(),
-            nome: "Jasmin",
-            profissao: "Engenheira Civil",
-            cidade: "Vitória",
-            uf: "ES",
-            email: "jasmin@email.com"
-        },
-        {
-            id: gerarID(),
-            nome: "Carlos",
-            profissao: "Desenvolvedor de Software",
-            cidade: "São Paulo",
-            uf: "SP",
-            email: "carlos@email.com"
-        },
-        {
-            id: gerarID(),
-            nome: "Maria",
-            profissao: "Designer Gráfico",
-            cidade: "Rio de Janeiro",
-            uf: "RJ",
-            email: "maria@email.com"
-        }
-    ];
+  
 
-    return (
-        <main>
-            <h2>Perfis de usuário</h2>
-            <div className="Perfis">
-                {listaPerfis.map((perfil) => ( // Renderizando lista da tela (JS básico)
-                    <CardPerfil
-                        key={perfil.id} // Cada elemento JSX precisa ter um ID único
-                        nome={perfil.nome}
-                        profissao={perfil.profissao}
-                        cidade={perfil.cidade}
-                        uf={perfil.uf}
-                        email={perfil.email}
-                    />
-                ))}
-            </div>
-        </main>
-    )
+  return (
+    <main>
+      <h2>Perfis de usuários</h2>
+      <div className="Perfis">
+        {listaPerfis.map((perfil) => (
+          <CardPerfil
+            key={perfil.id}
+            id={perfil.id}
+            nome={perfil.nome}
+            profissao={perfil.profissao}
+            cidade={perfil.cidade}
+            uf={perfil.uf}
+            email={perfil.email}
+          />
+        ))}
+      </div>
+    </main>
+  );
 }
 
 export default PerfisPage;
