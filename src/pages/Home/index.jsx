@@ -1,24 +1,13 @@
 import "./style.css";
 
 import { NavLink } from "react-router";
-import { gerarID } from "../../utils/gerarID";
-
-// Gerando um número para ID do objeto (excluir depois)
 
 function HomePage() {
-
-  const listaCompetencias = [
-    {
-      id: gerarID(),
-      habilidade: "comunicação",
-      nivel: "2"
-    }
-  ];
 
   return (
     <>
       <main>
-        <h1>Olá mundo</h1>
+        <h2>Olá mundo</h2>
         <NavLink to="/perfis">Perfis de usuário</NavLink>
 
         {/* 

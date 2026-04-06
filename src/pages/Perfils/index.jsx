@@ -34,7 +34,7 @@ function PerfisPage() {
 
     return (
         <main>
-            <h1>Perfis de usuário</h1>
+            <h2>Perfis de usuário</h2>
             <div className="Perfis">
                 {listaPerfis.map((perfil) => ( // Renderizando lista da tela (JS básico)
                     <CardPerfil

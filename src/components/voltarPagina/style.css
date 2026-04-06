@@ -1,0 +1,9 @@
+.Voltar {
+  border: none;
+  outline: none;
+  
+  background-color: transparent;
+  color: white;
+  padding: 8px 12px;
+  cursor: pointer;
+}
