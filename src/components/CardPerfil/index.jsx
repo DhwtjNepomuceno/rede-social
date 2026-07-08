@@ -7,6 +7,7 @@ import Avatar from "@mui/material/Avatar";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Chip from "@mui/material/Chip";
+import { Link } from "react-router";
 
 const boxStyles = {
   border: '1px solid white',
@@ -40,14 +41,15 @@ function CardPerfil(props) {
   const cidade = props.cidade.trim().length ? props.cidade : "Cidade não informada.";
   const email = validarEmail(props.email.trim()) ? props.email : "E-mail não informado.";
   return (
-    <Box component="div" sx={boxStyles}>
-      <Avatar sx={avatarStyles}>{nome[0]}</Avatar>
-
-      <Typography component="h2" variant="h4">{nome}</Typography>
-      <Chip label={profissao} sx={chipStyles} />
-      <Typography component="p" variant="h6">{email}</Typography>
-      <Typography component="p" variant="p">{cidade}/{uf}</Typography>
-    </Box>
+    <Link to={`${props.id}`}>
+      <Box component="div" sx={boxStyles}>
+        <Avatar sx={avatarStyles}>{nome[0]}</Avatar>
+        <Typography component="h2" variant="h4">{nome}</Typography>
+        <Chip label={profissao} sx={chipStyles} />
+        <Typography component="p" variant="h6">{email}</Typography>
+        <Typography component="p" variant="p">{cidade}/{uf}</Typography>
+      </Box>
+    </Link>
   )
 }
 

@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+div {
+  width: 100%;
+  text-align: center;
+}
+
+.titulo {
+  margin: 0;
+  align-items: flex-start;
+}
+
+header {
+  display: flex;
+  position: relative;
+  min-height: 104px;
+}
+
+h1 {
+  position: absolute;
+  left: 50vw;
+  transform: translateX(-50%);
+  width: 500px;
+}

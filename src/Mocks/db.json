@@ -1,0 +1,30 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "nome": "Jasmin",
+      "profissao": "Engenheira Civil",
+      "cidade": "Vitória",
+      "uf": "ES",
+      "email": "jass2342Linda@ehotmail.com"
+    },
+
+    {
+      "id": 2,
+      "nome": "Henrique",
+      "profissao": "Bombeiro Militar",
+      "cidade": "Santos",
+      "uf": "SP",
+      "email": "ToDeFog0@gmail.com"
+    },
+
+    {
+      "id": 3,
+      "nome": "Laila",
+      "profissao": "Pediatra",
+      "cidade": "Salvador",
+      "uf": "BA",
+      "email": "pedLaila@icloud.com"
+    }
+  ]
+}
